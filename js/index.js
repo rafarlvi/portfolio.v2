@@ -39,6 +39,14 @@ function toggleMenu(menuIcon) {
 	}
 }
 
+const menuLinks = document.querySelectorAll('.menu li a')
+Array.from(menuLinks).forEach(item => {
+	item.addEventListener('click', () => {
+		toggleMenu(document.querySelector('.container'));
+	});
+
+})
+
 //digitação automatica
 const name1 = document.querySelector('h1');
 let texto = name1.innerHTML

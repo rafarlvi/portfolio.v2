@@ -24,9 +24,41 @@ body {
 	opacity: 1;
 }
 
-@media screen and (max-width:1140px) {
+@media screen and (min-width:650px) and (max-width:810px) {
+	h1 {
+		font-size: 2.9rem;
+	}
+
+	h2 {
+		font-size: 2.9rem;
+	}
+
+	header {
+		background: linear-gradient(135deg, white 70%, #161616 30%)
+	}
+}
+
+@media screen and (min-width:810px) and (max-width:1110px) {
+	h1 {
+		font-size: 2.9rem;
+	}
+
+	h2 {
+		font-size: 2.9rem;
+	}
+
+	header {
+		background: linear-gradient(135deg, white 60%, #161616 40%)
+	}
+}
+
+@media screen and (max-width:1340px) {
 
 	h1 {
+		font-size: 3.5rem;
+	}
+
+	h2 {
 		font-size: 3.5rem;
 	}
 
@@ -89,6 +121,10 @@ body {
 }
 
 @media screen and (max-width:650px) {
+
+	header {
+		background: linear-gradient(135deg, white 70%, #161616 30%)
+	}
 
 	h1 {
 		font-size: 2.7rem;
