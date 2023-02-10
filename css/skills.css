@@ -1,0 +1,100 @@
+/*Habilidades*/
+#skills {
+	padding: 0 5%;
+	margin-bottom: 10rem;
+}
+
+#skills h2 {
+	margin-bottom: 4rem;
+}
+
+.container-skills {
+	display: flex;
+	gap: 5%;
+}
+
+.container-skills p {
+	margin: auto;
+	font-size: 1.3rem;
+	color: #161616;
+}
+
+.h-cards {
+	display: grid;
+	grid-template-columns: 22% 22% 22% 22%;
+	gap: 4%;
+	width: 50%;
+	row-gap: 2.5rem;
+}
+
+.h-card {
+	height: 8rem;
+	border-radius: .7rem;
+	background: #161616;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.h-card i {
+	font-size: 6rem;
+	transition: all 0.3s;
+}
+
+.h-card:hover .mdi-language-html5 {
+	color: #fc5323;
+	display: block;
+}
+
+.html {
+	display: none;
+}
+
+.h-card:hover .mdi-language-css3 {
+	color:
+		#2294f4;
+}
+
+.h-card:hover .mdi-language-javascript {
+	color:
+		#f3e31b;
+}
+
+.h-card:hover .mdi-bootstrap {
+	color:
+		#5c3c7c;
+}
+
+.h-card:hover .mdi-react {
+	color:
+		#64dcfc;
+}
+
+.h-card:hover .mdi-vuejs {
+	color: #3cbb84
+}
+
+.h-card:hover .mdi-language-php {
+	color: #8b93bb
+}
+
+.h-card:hover .mdi-laravel {
+	color:
+		#fc2c1c;
+}
+
+.h-card:hover .mdi-nodejs {
+	color:
+		#84bc44
+}
+
+.h-card:hover .mdi-git {
+	color:
+		#f45434
+}
+
+.h-card:hover .mdi-translate {
+	color:
+		white
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Kanit', sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+[animate="top"].hide {
+	position: relative;
+	top: 3rem;
+	opacity: 0;
+	transition: all 1s;
+}
+
+[animate="top"].show {
+	top: 0;
+	opacity: 1;
+}
+
+@media screen and (max-width:1140px) {
+
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	.name {
+		padding: 0 3%;
+	}
+
+	.name a {
+		display: none
+	}
+
+	.name::after {
+		border-color: #ccc;
+		transform: translate(-50%, 70px) rotate(45deg);
+		left: 50%;
+	}
+
+	/*About*/
+	#about {
+		grid-template-columns: 100%;
+		gap: 100px
+	}
+
+	.h-cards {
+		grid-template-columns: auto auto auto;
+		width: 100%;
+	}
+
+	.container-skills {
+		flex-flow: column;
+		row-gap: 100px;
+	}
+
+	/*Project*/
+
+	.projects {
+		grid-template-columns: 100%;
+	}
+
+	/*form*/
+	form {
+		margin-top: 50px;
+	}
+
+	form div {
+		width: 100%;
+	}
+
+	#contact input {
+		width: 100%;
+	}
+
+	#contact textarea {
+		width: 100%
+	}
+
+	#contact button {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:650px) {
+
+	/*Projects*/
+	.view::before {
+		left: 39.1%;
+	}
+
+	.view::after {
+		left: 40%;
+	}
+}
+
+@media screen and (min-width:650px) and (max-width:1200px) {
+	.view::before {
+		display: none
+	}
+
+	.view::after {
+		display: none;
+	}
+}

@@ -1,0 +1,165 @@
+/*Projetos*/
+.section-project {
+	padding: 0 5%;
+	margin-bottom: 10rem
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: 49% 49%;
+	gap: 2%
+}
+
+h2 {
+	font-size: 4rem;
+	margin-bottom: 0;
+}
+
+/*animações card*/
+.box {
+	position: relative;
+	height: 40rem;
+	background: #161616;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.box::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 37.5rem;
+	height: 40.625rem;
+	background: #45f3ff;
+	transform-origin: bottom right;
+	animation: cardEffect 6s linear infinite;
+}
+
+.box::after {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 37.5rem;
+	height: 40.625rem;
+	background: #45f3ff;
+	transform-origin: bottom right;
+	animation: cardEffect 6s linear infinite;
+	animation-delay: -3s;
+}
+
+
+@keyframes cardEffect {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg)
+	}
+}
+
+.project {
+	display: flex;
+	position: relative;
+	flex-flow: column;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 9;
+	background: #161616;
+	margin: auto;
+	height: 99%;
+	width: 99%;
+	border-radius: 10px;
+	align-items: center;
+	cursor: pointer;
+}
+
+.section-project h5 {
+	color: gray;
+	font-size: 1.2rem;
+	letter-spacing: 0.5rem;
+}
+
+.project img {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	border-radius: 10px;
+}
+
+.card-text {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 70%;
+	z-index: 15;
+}
+
+.card-text h3 {
+	color: white;
+	font-weight: bolder;
+	font-size: 2.5rem;
+}
+
+.card-text .view {
+	letter-spacing: 0px;
+	opacity: 0;
+	display: block;
+}
+
+.view::before {
+	content: '';
+	height: 0.2rem;
+	background: white;
+	width: 6%;
+	position: absolute;
+	top: 51.5%;
+	left: 31.5%;
+}
+
+.view::after {
+	content: '';
+	height: .9rem;
+	width: .9rem;
+	transform: rotate(135deg);
+	border-top: .2rem solid white;
+	border-left: .2rem solid white;
+	position: absolute;
+	top: 26%;
+	left: 34%;
+}
+
+.fundo {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	position: absolute;
+	z-index: 10;
+	transition: all 0.5s
+}
+
+.project:hover .fundo {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.project:hover .card-text h3 {
+	animation: cardText .5s forwards;
+}
+
+.project:hover .card-text .view {
+	animation: cardText .5s forwards .1s;
+}
+
+@keyframes cardText {
+	from {
+		opacity: 0;
+		transform: translateY(2rem)
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}

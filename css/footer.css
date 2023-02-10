@@ -1,0 +1,59 @@
+footer {
+	display: flex;
+	justify-content: space-between;
+	background: #161616;
+	color: white;
+	padding: 0 5%;
+	align-items: center;
+}
+
+.footer-social {
+	display: flex;
+	gap: 5%;
+	width: 50%;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.fi-box {
+	background: white;
+	width: 2.8rem;
+	height: 100%;
+	border-radius: .4rem;
+	display: flex;
+	transform: rotate(0deg);
+	transition: all .8s;
+}
+
+.fi-box i {
+	z-index: 100;
+	font-size: 2rem;
+	color: #161616;
+	margin: auto;
+}
+
+.fi-box:hover,
+.fi:hover i {
+	background: #0474b3;
+	color: white;
+}
+
+
+.linkedin-box {
+	transform: rotate(0deg);
+	transition: all .8s;
+}
+
+.linkedin-box i {
+	font-size: 4rem;
+	color: white;
+}
+
+.linkedin-box:hover i {
+	color: #0474b3
+}
+
+.linkedin-box:hover,
+.fi-box:hover {
+	transform: rotate(360deg)
+}

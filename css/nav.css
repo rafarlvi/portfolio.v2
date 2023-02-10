@@ -1,0 +1,155 @@
+/*Nav bar*/
+.nav-menu {
+	position: fixed;
+	right: 0;
+	z-index: 9999;
+	height: 2rem;
+	width: 100%;
+	display: flex;
+	background: none;
+	justify-content: flex-end;
+	align-items: center;
+	height: 10%;
+	padding: 0 5%;
+}
+
+/*Menu icon*/
+.container {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: gray;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	transform: translate(0, -11px) rotate(45deg);
+}
+
+.container:hover div:not(.change div) {
+	margin: 9px 0;
+}
+
+.change {
+	transition: all .7s;
+	transform: rotate(0)
+}
+
+.container:hover.change {
+	transform: rotate(90deg);
+}
+
+.menu {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 100%;
+	width: 100%;
+	padding: 0;
+	opacity: 1;
+	z-index: 1000;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(10px);
+}
+
+.menuIndo {
+	right: 0%;
+	transition: all 1s;
+}
+
+.menuVoltando {
+	animation: volta 1s forwards;
+	right: 0 !important;
+}
+
+@keyframes volta {
+	to {
+		transform: translateX(100%)
+	}
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	padding: 0;
+}
+
+nav li {
+	text-align: center;
+	padding: .4rem 0;
+}
+
+nav li a {
+	font-size: 3rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	transition: .3s;
+}
+
+nav li a:hover {
+	color: #45f3ff
+}
+
+.social-media {
+	transform: translateY(5rem);
+	display: flex;
+
+}
+
+.i-box {
+	background: white;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	margin: 1rem;
+	padding: 0rem .5rem;
+	overflow: hidden;
+	position: relative;
+	border: 5px solid white;
+}
+
+.i-box::before {
+	content: '';
+	position: absolute;
+	width: 5.5rem;
+	height: 5.5rem;
+	transform: translateY(4rem);
+	transition: all .5s;
+}
+
+.i-box:hover.i-box::before {
+	transform: translateY(-.8rem);
+	background: #161616;
+}
+
+.i-box:hover i {
+	color: white;
+}
+
+.social-media i {
+	font-size: 2rem;
+	position: relative;
+	z-index: 2000;
+	color: black;
+}

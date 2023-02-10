@@ -1,0 +1,38 @@
+/*About*/
+#about {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	padding: 0 5%;
+	margin-bottom: 10rem;
+}
+
+.text-about {
+	display: flex;
+	flex-flow: wrap column;
+	justify-content: center
+}
+
+.text-about p {
+	font-size: 1.5rem;
+	color: gray;
+}
+
+.about-img {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start
+}
+
+#about img {
+	animation: img 3s linear infinite alternate;
+}
+
+@keyframes img {
+	from {
+		transform: translateY(-20px);
+	}
+
+	to {
+		transform: translateY(20px);
+	}
+}

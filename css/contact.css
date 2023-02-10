@@ -1,0 +1,89 @@
+/*Contato*/
+#contact {
+	padding: 0 5%;
+	margin-bottom: 6rem;
+}
+
+.text-zone h2 {
+	padding: 0;
+	margin: 0;
+}
+
+.text-zone p {
+	color: gray;
+	font-size: 1.5rem;
+}
+
+
+/*form*/
+
+form {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1rem;
+}
+
+form div {
+	display: flex;
+	width: 50%;
+	gap: 1%;
+}
+
+#contact input,
+textarea {
+	height: 16%;
+	border: 0;
+	width: 50%;
+	background: #161616;
+	color: white;
+	border-radius: .5rem;
+	border-bottom: 2px solid #45f3ff;
+	padding: 1rem 1rem;
+}
+
+textarea {
+	padding-top: 1rem;
+	height: 15rem;
+	border-bottom: 3px solid #45f3ff;
+}
+
+textarea:focus {
+	outline: 0;
+}
+
+input:focus {
+	transition: .3s;
+	outline: 0;
+}
+
+#contact button {
+	padding: 1rem;
+	color: gray;
+	background: #161616;
+	width: 50%;
+	border-radius: .5rem;
+	transition: all .3s;
+	position: relative;
+	cursor: pointer;
+}
+
+#contact button::before {
+	content: '';
+	position: absolute;
+	transition: all .8s;
+	left: 0%;
+	bottom: -.1rem;
+	width: 0;
+	height: 0.2rem;
+	background: red;
+	border-bottom-right-radius: .5rem;
+	border-bottom-left-radius: .5rem;
+}
+
+#contact button:hover {
+	color: white;
+}
+
+#contact button:hover::before {
+	width: 100%;
+}
