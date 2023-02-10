@@ -3,7 +3,7 @@ footer {
 	justify-content: space-between;
 	background: #161616;
 	color: white;
-	padding: 0 5%;
+	padding: 2% 5%;
 	align-items: center;
 }
 
@@ -32,9 +32,15 @@ footer {
 	margin: auto;
 }
 
-.fi-box:hover,
-.fi:hover i {
+.github:hover {
 	background: #0474b3;
+}
+
+.whatsapp:hover {
+	background: green;
+}
+
+.fi-box:hover i {
 	color: white;
 }
 
